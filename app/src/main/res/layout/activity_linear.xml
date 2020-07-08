@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:background="@android:color/holo_orange_light"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@android:color/holo_red_dark"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@android:color/holo_orange_dark"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@android:color/holo_orange_light"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@android:color/holo_green_light"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@android:color/holo_green_dark"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@android:color/holo_blue_bright"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@android:color/holo_purple"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
