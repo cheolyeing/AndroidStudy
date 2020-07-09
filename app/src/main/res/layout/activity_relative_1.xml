@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/center"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_purple">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_above="@+id/center"
+        android:layout_alignLeft="@+id/center"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_orange_dark"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_below="@id/center"
+        android:layout_alignLeft="@id/center"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_toLeftOf="@id/center"
+        android:layout_alignTop="@id/center"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_red_dark"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_toRightOf="@id/center"
+        android:layout_alignTop="@id/center"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"></RelativeLayout>
+
+</RelativeLayout>

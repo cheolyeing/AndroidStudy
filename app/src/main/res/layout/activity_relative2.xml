@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/id_area"
+
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="200dp"
+        android:layout_height="40dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pw_area"
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/id_area"
+        android:layout_alignLeft="@id/id_area"
+        android:layout_alignRight="@id/id_area"
+
+        android:background="@android:color/darker_gray"
+        android:layout_width="0dp"
+        android:layout_height="40dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signup_area"
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/pw_area"
+        android:layout_alignLeft="@id/pw_area"
+
+        android:background="@android:color/holo_orange_light"
+        android:layout_width="80dp"
+        android:layout_height="40dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_area"
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/pw_area"
+        android:layout_alignRight="@+id/pw_area"
+
+        android:background="@android:color/holo_blue_bright"
+        android:layout_width="80dp"
+        android:layout_height="40dp"></RelativeLayout>
+</RelativeLayout>
