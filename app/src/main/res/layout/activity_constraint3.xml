@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_new"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -46,7 +46,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/button_new"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="@+id/button_new" />
 </androidx.constraintlayout.widget.ConstraintLayout>
