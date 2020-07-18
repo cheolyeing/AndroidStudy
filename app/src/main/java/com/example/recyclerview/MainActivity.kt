@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,15 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView.adapter = MyRecyclerViewAdapter()
-        var gridManager = GridLayoutManager(this, 3)
-        recyclerView.layoutManager = gridManager
-
-        gridManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                if (position == 0) return 3
-                return 1
-            }
-        }
+        var linearManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = linearManager
     }
 
     class MyRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -55,13 +51,8 @@ class MainActivity : AppCompatActivity() {
                 LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
 
             var params = view.layoutParams
-            if(viewType==HEADER_IMAGE) {
-                params.height = 2 * parent.measuredWidth / 3
-                params.width = parent.measuredWidth
-            } else {
-                params.height = parent.measuredWidth / 3
-                params.width = parent.measuredWidth / 3
-            }
+            params.height = parent.measuredWidth / 3
+            params.width = parent.measuredWidth
 
             return MyViewHolder(view)
         }
@@ -74,16 +65,22 @@ class MainActivity : AppCompatActivity() {
         // Bind view holder - data
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             var view = holder as MyViewHolder
-            view!!.imageView!!.setImageResource(images[position])
+            view!!.profile_imageView!!.setImageResource(images[position])
+            view!!.title_textView!!.text = "Title ${position.toString()}"
+            view!!.content_textView!!.text = "CONTENT ${position.toString()}"
         }
     }
 }
 
 class MyViewHolder(view: View?) : RecyclerView.ViewHolder(view!!) {
-    var imageView: ImageView? = null
+    var profile_imageView: ImageView? = null
+    var title_textView: TextView? = null
+    var content_textView: TextView? = null
 
     init {
-        imageView = view!!.findViewById(R.id.item_imageView)
+        profile_imageView = view!!.findViewById(R.id.profile_imageview)
+        title_textView = view!!.findViewById(R.id.title_textview)
+        content_textView = view!!.findViewById(R.id.content_textview)
     }
 }
 
